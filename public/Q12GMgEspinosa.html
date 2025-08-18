@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<h2> Q1 2nd Graded Exercise submitted by Cassie Espinosa of 9-Magnesium </h2>
+
+    <label> Enter Meal Price
+        <input id="mealPrice" />
+    </label></br/>
+
+    <label> Enter Tip
+        <input id="tip" />
+    </label></br/>
+
+    <label> Enter Service Charge (%)
+        <input id="serviceCharge" />
+    </label></br/>
+
+    <p> Total Meal :
+        <span id="resultHere"></span>
+    </p>
+    <button onclick="totalMeal()">Accept Input</button>
+
+<script>
+    function totalMeal(){
+    
+        let mp = parseFloat(document.getElementById("mealPrice").value);
+        let tip = parseFloat(document.getElementById("tip").value);
+        let sc = parseFloat(document.getElementById("serviceCharge").value);
+
+        let totalCost = mp + tip + (sc / 100 * mp);
+
+        document.getElementById("resultHere").innerHTML = totalCost.toFixed(2);
+    }
+</script>
+
+    <p> References: Espinosa, C. (2025). Speed Test Bonus Code. Philippine Science High School.</p>
+
+</body>
+</html>
